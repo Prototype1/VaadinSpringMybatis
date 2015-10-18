@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<listener>
@@ -15,10 +14,11 @@
 
 	<servlet>
 		<servlet-name>VaadinServlet</servlet-name>
-		<servlet-class>
-			com.simplevaadin.servlet.MyVaadinSpringServlet
-		</servlet-class>
-
+		<servlet-class>com.simplevaadin.servlet.MyVaadinSpringServlet</servlet-class>
+		<init-param>
+			<param-name>widgetset</param-name>
+			<param-value>MyAppWidgetset</param-value>
+		</init-param>
 
 	</servlet>
 
